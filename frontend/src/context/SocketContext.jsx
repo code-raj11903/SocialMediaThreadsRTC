@@ -15,7 +15,8 @@ export const SocketContextProvider = ({ children }) => {
 	const user = useRecoilValue(userAtom);
 
 	useEffect(() => {
-		const socket = io("http://localhost:5000", {
+		const socket = io("/", {    //      http://localhost:5000 for development and  /  means https://threadify.onrender.com/  any url starting with this 
+		
 			query: {
 				userId: user?._id,
 			},

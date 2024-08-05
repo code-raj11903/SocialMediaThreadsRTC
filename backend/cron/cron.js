@@ -1,7 +1,7 @@
 import cron from "cron";
 import https from "https";
 
-const URL = "http://localhost:5000"; //https://threads-clone-9if3.onrender.com app url 
+const URL = "https://threadify.onrender.com"; //http://localhost:5000 app url for development 
 
 const job = new cron.CronJob("*/14 * * * *", function () {
 	https
